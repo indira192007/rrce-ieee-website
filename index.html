@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IEEE Student Branch · Rajarajeswari College of Engineering, Bengaluru</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="bg" aria-hidden="true"></canvas>
+
+<nav aria-label="Main">
+ <div class="wrap">
+  <a href="#top" class="logo"><i>⚡</i> IEEE · Rajarajeswari College of Engineering</a>
+  <button id="burger" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+  <ul id="menu">
+   <li><a href="#about">About</a></li>
+   <li><a href="#societies">Societies</a></li>
+   <li><a href="#events">Events</a></li>
+   <li><a href="#team">Team</a></li>
+   <li><a href="#join">Join</a></li>
+  </ul>
+ </div>
+</nav>
+
+<header class="hero" id="top">
+ <canvas id="scope" aria-hidden="true"></canvas>
+ <div class="wrap">
+  <div class="kicker">IEEE Student Branch</div>
+  <h1>Rajarajeswari College of Engineering</h1>
+  <div class="place">Kumbalgodu, Bengaluru, Karnataka</div>
+  <p>Advancing technology for humanity. Workshops, hackathons, expert talks and a global engineering network, run by students like you.</p>
+  <a href="#join" class="btn fill">Become a member</a>
+  <a href="#events" class="btn ghost">See upcoming events</a>
+  <div class="peek" aria-label="What's inside">
+   <a href="#societies">💻 Societies</a><a href="#events">📅 Events</a><a href="#team">👥 Team</a><a href="#about">📊 Our impact</a>
+  </div>
+ </div>
+ <div class="readout" id="readout" aria-hidden="true">Move your cursor to tune the signal<br>freq <b id="fq">0</b> Hz · amp <b id="am">0</b> V</div>
+</header>
+
+<section id="about">
+ <div class="wrap about">
+  <div>
+   <h2>Where classroom theory meets real engineering</h2>
+   <p class="lead">We are a student-run chapter of IEEE, the world's largest technical professional organisation. Through workshops, hackathons, expert talks and community projects, members at RRCE get hands-on experience and a global network long before graduation.</p>
+  </div>
+  <div class="stats" id="stats">
+   <!-- Replace these placeholder numbers with your branch's real figures -->
+   <div class="stat"><b data-n="150">0</b><span>Active members</span></div>
+   <div class="stat"><b data-n="25">0</b><span>Events each year</span></div>
+   <div class="stat"><b data-n="6">0</b><span>Technical societies</span></div>
+   <div class="stat"><b data-n="12">0</b><span>Industry speakers</span></div>
+  </div>
+ </div>
+</section>
+
+<section id="societies" class="dark">
+ <div class="wrap">
+  <h2>Societies and chapters</h2>
+  <p class="lead">Pick the community that matches your curiosity. Update this list to match the chapters your branch runs.</p>
+  <div class="soc">
+   <article class="card"><span class="ic">💻</span><h3>Computer Society</h3><p>Coding contests, AI/ML study circles and open-source sprints.</p></article>
+   <article class="card"><span class="ic">📡</span><h3>Communications Society</h3><p>Wireless, IoT and signal processing projects with real hardware.</p></article>
+   <article class="card"><span class="ic">🔌</span><h3>Power &amp; Energy Society</h3><p>Renewable energy, smart grids and sustainable campus ideas.</p></article>
+   <article class="card"><span class="ic">👩‍🔬</span><h3>Women in Engineering</h3><p>Mentorship, leadership talks and a stronger voice for women in tech.</p></article>
+   <article class="card"><span class="ic">🤖</span><h3>Robotics &amp; Automation</h3><p>Build bots, enter competitions and learn control systems by doing.</p></article>
+  </div>
+ </div>
+</section>
+
+<section id="events">
+ <div class="wrap">
+  <h2>Events timeline</h2>
+  <p class="lead">Filter by type to find what fits you.</p>
+  <div class="filters" role="group" aria-label="Filter events" id="filters"></div>
+  <div class="tl" id="tl"></div>
+ </div>
+</section>
+
+<section id="team" class="dark">
+ <div class="wrap">
+  <h2>Meet the executive committee</h2>
+  <p class="lead">Replace these sample names and roles with your branch's team.</p>
+  <div class="team">
+   <div class="mem"><div class="av"><span>AK</span></div><h3>Student Name</h3><p>Chairperson</p></div>
+   <div class="mem"><div class="av"><span>SR</span></div><h3>Student Name</h3><p>Vice Chair</p></div>
+   <div class="mem"><div class="av"><span>MP</span></div><h3>Student Name</h3><p>Secretary</p></div>
+   <div class="mem"><div class="av"><span>NV</span></div><h3>Student Name</h3><p>Treasurer</p></div>
+   <div class="mem"><div class="av"><span>DH</span></div><h3>Faculty Name</h3><p>Branch Counselor</p></div>
+  </div>
+ </div>
+</section>
+
+<section id="join">
+ <div class="wrap join">
+  <div>
+   <h2>Join the branch</h2>
+   <p class="lead">Membership gives you access to IEEE digital resources, discounted conferences, competitions and a worldwide community of engineers. Fill in the form and the team will contact you.</p>
+  </div>
+  <form id="form" novalidate>
+   <label>Full name<input id="nm" autocomplete="name"><span class="err"></span></label>
+   <label>College email<input id="em" type="email" autocomplete="email"><span class="err"></span></label>
+   <label>Branch of study
+    <select id="br"><option value="">Choose one</option><option>CSE</option><option>ISE</option><option>ECE</option><option>EEE</option><option>Mechanical</option><option>Civil</option><option>Other</option></select>
+    <span class="err"></span></label>
+   <button class="btn fill" type="submit">Send
